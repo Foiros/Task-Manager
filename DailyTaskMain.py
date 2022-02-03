@@ -12,8 +12,7 @@ Active = True
 
 while Active:
     print(GREETING_TEXT)
-    userinput = int(input())
+    userinput = input()
     read_input(userinput)
-    if userinput == 4:
+    if userinput == "4":
         Active = False
-

@@ -27,12 +27,12 @@ def write():
 
 def read_input(userinput):
     # We take users input and based on it we determine, what action we take
-    if userinput == 1:
+    if userinput == "1":
         clear()
         TaskList.read_file(FILE_PATH)
-    elif userinput == 2:
+    elif userinput == "2":
         clear()
         write()
-    elif userinput == 3:
+    elif userinput == "3":
         TaskList.remove_file(FILE_PATH)
         clear()
