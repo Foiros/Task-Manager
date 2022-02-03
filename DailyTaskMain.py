@@ -8,15 +8,12 @@ from MenuCommands import read_input
 
 GREETING_TEXT = "Hello, master.\n 1. Do you want to open task list?\n 2. Do you want to write into task list\n " \
                 "3. Remove existing list\n 4. Exit Task List Manager 2000"
-ACTIVE = True
+Active = True
 
-
-def main():
+while Active:
     print(GREETING_TEXT)
-    read_input(userinput=input())
-
-
-while ACTIVE:
-    main()
-    ACTIVE = False
+    userinput = int(input())
+    read_input(userinput)
+    if userinput == 4:
+        Active = False
 

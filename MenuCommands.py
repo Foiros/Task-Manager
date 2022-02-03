@@ -1,8 +1,9 @@
 from os import system, name
 import TaskList
 
-FILE_PATH = "C:/users/arttu/Desktop/TaskList.txt"
+# Idea here is to separate these from the main file, so that main is much cleaner and simpler
 
+FILE_PATH = "C:/users/arttu/Desktop/TaskList.txt"
 
 def clear():
     if name == 'nt':
@@ -25,14 +26,13 @@ def write():
 
 
 def read_input(userinput):
-    if userinput == "1":
+    # We take users input and based on it we determine, what action we take
+    if userinput == 1:
         clear()
         TaskList.read_file(FILE_PATH)
-    if userinput == "2":
+    elif userinput == 2:
         clear()
         write()
-    if userinput == "3":
+    elif userinput == 3:
         TaskList.remove_file(FILE_PATH)
         clear()
-    if userinput == "4":
-        pass
